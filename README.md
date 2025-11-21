@@ -16,36 +16,51 @@ The project highlights backend engineering techniques such as structured endpoin
 ### **Authentication and Security**
 
 • Session based authentication token system
+
 • Login and registration flows
+
 • Role based authorization through admin flags
+
 • Automatic token regeneration on login
 
 ### **Messaging**
 
 • Message creation with server generated IDs
+
 • Message history retrieval
+
 • Long polling update channel with efficient wake up notifications
+
 • Admin controlled message clearing
 
 ### **Users**
 
 • Full user lifecycle: create, update, delete
+
 • Username management with conflict detection
+
 • Real time presence tracking using heartbeat and activity timestamps
+
 • Admin elevation support
 
 ### **Concurrency and Architecture**
 
 • ReaderWriterLockSlim protected stores
+
 • Asynchronous log writer with file rotation
+
 • Task based long poll notifier
+
 • Clear separation of concerns across endpoints, stores, and services
 
 ### **Developer Experience**
 
 • Strong OpenAPI and Scalar UI integration
+
 • Interactive API reference available at `/scalar`
+
 • Custom OpenAPI transformer that describes routes, schemas, and security
+
 • Local development on a clean endpoint structure using Minimal APIs
 
 ## **Tech Stack**
@@ -92,21 +107,29 @@ and programmatically at
 ### **Authentication (`/auth`)**
 
 • `POST /auth/login`
+
 • `POST /auth/register`
 
 ### **Users (`/users`)**
 
 • `GET /users` – list usernames
+
 • `POST /users/update` – update username and optionally password
+
 • `POST /users/delete` – remove user
+
 • `GET /users/status` – list online states
+
 • `POST /users/heartbeat` – update presence
 
 ### **Messages (`/messages`)**
 
 • `POST /messages/send` – create message
+
 • `GET /messages/history` – full or limited history
+
 • `GET /messages/updates` – long polling endpoint
+
 • `POST /messages/clear` – admin clear
 
 ### **System (`/system`)**
@@ -133,8 +156,11 @@ Both the message store and user store inherit from **ConcurrentStoreBase**, whic
 This ensures:
 
 • Unlimited parallel reads
+
 • Exclusive writes
+
 • Safe multi threaded access
+
 • Clean isolation of locking logic
 
 ## **Logging**
@@ -143,8 +169,11 @@ The custom logger writes asynchronously using a queue.
 Capabilities include:
 
 • File rotation
+
 • Severity filtering
+
 • Graceful shutdown
+
 • Structured timestamped lines
 
 Logs are stored in the `/logs` directory.
