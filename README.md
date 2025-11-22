@@ -5,7 +5,7 @@
 ![OpenAPI](https://img.shields.io/badge/OpenAPI-3.1-6BA539)
 ![Scalar UI](https://img.shields.io/badge/Docs-Scalar%20UI-1F7A8C)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![Status](https://img.shields.io/badge/Status-Complete-success)
 
 DotNetChatServer is a backend for a real time chat application built with ASP.NET Core Minimal APIs.
 It handles authentication, user management, message flow, online presence, and long polling updates with a concurrency safe in memory architecture.
