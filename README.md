@@ -7,9 +7,12 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-Complete-success)
 
-DotNetChatServer is a backend for a real time chat application built with ASP.NET Core Minimal APIs.
+DotNetChatServer is a backend for a real time chat application built with ASP.NET Core Minimal APIs. 
+
 It handles authentication, user management, message flow, online presence, and long polling updates with a concurrency safe in memory architecture.
 The project highlights backend engineering techniques such as structured endpoint design, session based security, efficient message delivery, and lock protected data stores.
+
+> Note: You may find the complete group project repo (including the frontend client written in C# with Raylib CS) here: [CSharp-Raylib-Chat-App](https://github.com/Christian-Gennari/CSharp-Raylib-Chat-App.git).
 
 ## **Features**
 
